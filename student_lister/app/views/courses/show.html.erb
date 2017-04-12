@@ -1,0 +1,6 @@
+<h1>Show a course</h1>
+<%= @course.name %>
+
+<%@course.students.each do | student| %>
+<%= link_to "#{student.first_name} #{student.last_name} #{student.email_address}", student_path(student)   %>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>Create a New Student</h1>
+
+<%= form_for(@student) do |f| %>
+<%= f.label "Name", "First Name" %>
+<%= f.text_field :first_name %>
+<%= f.label "Name", "Last Name" %>
+<%= f.text_field :last_name %><br>
+<%= f.label "Name", "Email Address" %>
+<%= f.text_field :email_address %>
+
+<%= f.collection_select(:course_id, Course.all, :id, :name, prompt: true)  %>
+
+<%= f.submit %>
+<% end %>

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post '/courses', to: 'courses#create'
   get '/courses/:id/edit', to: 'courses#edit', as: 'edit_course'
   patch '/courses/:id', to: 'courses#update'
+
+  resources :students
   #resources :courses, only: [:index]
 
   # The following is defined by resources
